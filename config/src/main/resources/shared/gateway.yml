@@ -6,9 +6,9 @@
 #           thread:
 #             timeoutInMilliseconds: 20000
 
-# ribbon:
-#   ReadTimeout: 20000
-#   ConnectTimeout: 20000
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
 
 zuul:
   ignoredServices: '*'
@@ -20,6 +20,11 @@ zuul:
     hello-service:
         path: /hello/**
         serviceId: hello-service
+        stripPrefix: false
+        sensitiveHeaders:
+    py-service:
+        path: /py-hello/**
+        serviceId: py-service
         stripPrefix: false
         sensitiveHeaders:
 

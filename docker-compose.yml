@@ -29,7 +29,8 @@ services:
     build: gateway
     restart: always
     depends_on:
-      - registry
+      config:
+        condition: service_healthy
     ports:
       - 80:4000
 
@@ -37,6 +38,16 @@ services:
     build: hello-service
     restart: always
     depends_on:
-      - registry
+      config:
+        condition: service_healthy
     ports:
       - 8080:8080
+
+  py-service:
+    build: py-service
+    restart: always
+    depends_on:
+      config:
+        condition: service_healthy
+    ports:
+      - 8082:8082
