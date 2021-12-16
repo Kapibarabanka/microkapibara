@@ -7,8 +7,6 @@ spring:
       # fail-fast: true
 
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
     registerWithEureka: false
     fetchRegistry: false

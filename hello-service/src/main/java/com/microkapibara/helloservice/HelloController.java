@@ -1,10 +1,11 @@
-package com.microkapibara.helloservice.controller;
+package com.microkapibara.helloservice;
 
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
-    @RequestMapping(path = "/my_hello", method = RequestMethod.GET)
+    @RequestMapping(value = "/my_hello", method = RequestMethod.GET)
+    @ResponseBody
 	public String getHello() {
 		return "HELLO FROM FUCKING SERVICES";
 	}

@@ -1,7 +1,7 @@
 server:
   servlet:
     context-path: /hello
-  port: 6000
+  port: 8080
 
 # feign:
 #   hystrix:
