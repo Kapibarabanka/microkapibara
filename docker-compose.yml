@@ -41,7 +41,7 @@ services:
       config:
         condition: service_healthy
     ports:
-      - 8080:8080
+      - "8080-8085:8080"
 
   py-service:
     build: py-service
@@ -50,4 +50,4 @@ services:
       config:
         condition: service_healthy
     ports:
-      - 8082:8082
+      - "8086-8090:8082"
