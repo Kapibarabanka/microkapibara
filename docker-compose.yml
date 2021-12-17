@@ -1,22 +1,14 @@
 version: '2.1'
 services:
-  # rabbitmq:
-  #   image: rabbitmq:3-management
-  #   restart: always
-  #   ports:
-  #     - 15672:15672
-  #   logging:
-  #     options:
-  #       max-size: "10m"
-  #       max-file: "10"
-
   config:
+    image: microkapibara_config
     build: config
     restart: always
     ports:
       - 8888:8888
 
   registry:
+    image: microkapibara_registry
     build: registry
     restart: always
     depends_on:
@@ -26,6 +18,7 @@ services:
       - 8761:8761
 
   gateway:
+    image: microkapibara_gateway
     build: gateway
     restart: always
     depends_on:
@@ -35,6 +28,7 @@ services:
       - 80:4000
 
   hello-service:
+    image: microkapibara_hello-service
     build: hello-service
     restart: always
     depends_on:
@@ -44,6 +38,7 @@ services:
       - "8080-8085:8080"
 
   py-service:
+    image: microkapibara_py-service
     build: py-service
     restart: always
     depends_on:

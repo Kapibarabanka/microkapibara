@@ -3,6 +3,6 @@ server:
     context-path: /hello
   port: 8080
 
-# feign:
-#   hystrix:
-#     enabled: true
+feign:
+  hystrix:
+    enabled: true

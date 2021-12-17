@@ -1,5 +1,6 @@
 package com.microkapibara.helloservice;
 
+import com.microkapibara.helloservice.py_client.PyClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

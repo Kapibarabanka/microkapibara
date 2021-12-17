@@ -4,8 +4,4 @@ spring:
   cloud:
     config:
       uri: http://config:8888
-      # fail-fast: true
-# eureka:
-#   client:
-#     serviceURL:
-#       defaultZone: http://registry:8761/eureka
+      fail-fast: true

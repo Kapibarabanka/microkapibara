@@ -38,6 +38,5 @@
 		<module>gateway</module>
 		<module>hello-service</module>
 	</modules>
-
-
+	
 </project>
